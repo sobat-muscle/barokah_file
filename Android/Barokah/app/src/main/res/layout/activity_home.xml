@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_alignTop="@+id/title"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginEnd="0dp"
+            android:background="@color/design_default_color_primary_dark" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/app_name"
+            android:textColor="@color/colortext"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="16dp"
+            app:cardBackgroundColor="@color/cardview_shadow_start_color"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:drawableStart="@drawable/search_icon"
+                android:drawableLeft="@drawable/search_icon"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/search_your_recipes"
+                android:textColor="@color/colortext" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerHeader"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/cardSearch"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:foregroundGravity="center"
+            android:overScrollMode="never" />
+
+        <include
+            android:id="@+id/header_shimmer"
+            layout="@layout/item_recycler_header_shimmer" />
+
+        <TextView
+            android:id="@+id/titleCategory"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/viewPagerHeader"
+            android:layout_alignTop="@+id/viewPagerHeader"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/meal_category"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <include
+            android:id="@+id/recycler_category_shimmer"
+            layout="@layout/item_recycler_category_shimmer"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewPagerHeader"
+            android:layout_alignBottom="@+id/titleCategory"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="161dp"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+
+    <!-- TODO 1 Add <View>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

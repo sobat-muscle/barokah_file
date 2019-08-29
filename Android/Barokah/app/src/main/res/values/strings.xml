@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Kantin Barokah</string>
+    <string name="search_your_recipes">Search</string>
+    <string name="meal_category">Kategori Menu</string>
+    <string name="btn_plus">+</string>
+    <string name="btn_minus">-</string>
+    <string name="btn_text">1</string>
+</resources>
